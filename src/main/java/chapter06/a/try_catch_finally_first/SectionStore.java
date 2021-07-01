@@ -1,4 +1,4 @@
-package chapter06.a_try_catch_finally_first;
+package chapter06.a.try_catch_finally_first;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;

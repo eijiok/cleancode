@@ -1,8 +1,6 @@
-package chapter06.a_try_catch_finally_first;
+package chapter06.a.try_catch_finally_first;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class SectionStoreTest {
 
