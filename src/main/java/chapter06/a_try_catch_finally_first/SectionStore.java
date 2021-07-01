@@ -8,7 +8,7 @@ public class SectionStore {
     public List<RecordedGrip> retrieveSection(String sectionName) {
         try {
             FileInputStream stream = new FileInputStream(sectionName);
-        } catch (Exception e) {
+        } catch ( java.io.FileNotFoundException e) {
             throw new StorageException("retrieval error", e);
         }
         return new ArrayList<RecordedGrip>();
