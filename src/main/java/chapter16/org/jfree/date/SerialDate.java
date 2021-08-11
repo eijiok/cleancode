@@ -491,6 +491,7 @@ public abstract class SerialDate implements Comparable, Serializable, MonthConst
 
         // now search through the month names...
         if ((result < 1) || (result > 12)) {
+            result = -1;
             for (int i = 0; i < monthNames.length; i++) {
                 if (s.equalsIgnoreCase(shortMonthNames[i])) {
                     result = i + 1;
