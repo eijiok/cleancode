@@ -694,20 +694,17 @@ public abstract class SerialDate implements Comparable, Serializable, MonthConst
      * @return the earliest date that falls on the specified day-of-the-week
      * and is AFTER the base date.
      */
-    public static SerialDate getFollowingDayOfWeek(final int targetWeekday,
-                                                   final SerialDate base) {
+    public static SerialDate getFollowingDayOfWeek(final int targetWeekday, final SerialDate base) {
 
         // check arguments...
         if (!SerialDate.isValidWeekdayCode(targetWeekday)) {
-            throw new IllegalArgumentException(
-                    "Invalid day-of-the-week code."
-            );
+            throw new IllegalArgumentException("Invalid day-of-the-week code.");
         }
 
         // find the date...
         final int adjust;
         final int baseDOW = base.getDayOfWeek();
-        if (baseDOW > targetWeekday) {
+        if (baseDOW >= targetWeekday) {
             adjust = 7 + Math.min(0, targetWeekday - baseDOW);
         } else {
             adjust = Math.max(0, targetWeekday - baseDOW);
@@ -725,25 +722,19 @@ public abstract class SerialDate implements Comparable, Serializable, MonthConst
      * @return the date that falls on the specified day-of-the-week and is
      * CLOSEST to the base date.
      */
-    public static SerialDate getNearestDayOfWeek(final int targetDOW,
-                                                 final SerialDate base) {
+    public static SerialDate getNearestDayOfWeek(final int targetDOW, final SerialDate base) {
 
         // check arguments...
         if (!SerialDate.isValidWeekdayCode(targetDOW)) {
-            throw new IllegalArgumentException(
-                    "Invalid day-of-the-week code."
-            );
+            throw new IllegalArgumentException("Invalid day-of-the-week code.");
         }
 
         // find the date...
-        final int baseDOW = base.getDayOfWeek();
-        int adjust = -Math.abs(targetDOW - baseDOW);
-        if (adjust >= 4) {
-            adjust = 7 - adjust;
-        }
-        if (adjust <= -4) {
-            adjust = 7 + adjust;
-        }
+        int delta = targetDOW - base.getDayOfWeek();
+        int positiveDelta = delta + 7;
+        int adjust = positiveDelta % 7;
+        if (adjust > 3)
+            adjust -= 7;
         return SerialDate.addDays(adjust, base);
 
     }
