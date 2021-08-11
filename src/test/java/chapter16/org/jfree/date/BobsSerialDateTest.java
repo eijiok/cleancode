@@ -25,47 +25,47 @@ public class BobsSerialDateTest extends TestCase {
         assertEquals(-1, stringToWeekdayCode("Hello"));
         assertEquals(MONDAY, stringToWeekdayCode("Monday"));
         assertEquals(MONDAY, stringToWeekdayCode("Mon"));
-        //todo assertEquals(MONDAY,stringToWeekdayCode("monday"));
-        // assertEquals(MONDAY,stringToWeekdayCode("MONDAY"));
-        // assertEquals(MONDAY, stringToWeekdayCode("mon"));
+        assertEquals(MONDAY,stringToWeekdayCode("monday"));
+        assertEquals(MONDAY,stringToWeekdayCode("MONDAY"));
+        assertEquals(MONDAY, stringToWeekdayCode("mon"));
 
         assertEquals(TUESDAY, stringToWeekdayCode("Tuesday"));
         assertEquals(TUESDAY, stringToWeekdayCode("Tue"));
-        // assertEquals(TUESDAY,stringToWeekdayCode("tuesday"));
-        // assertEquals(TUESDAY,stringToWeekdayCode("TUESDAY"));
-        // assertEquals(TUESDAY, stringToWeekdayCode("tue"));
-        // assertEquals(TUESDAY, stringToWeekdayCode("tues"));
+        assertEquals(TUESDAY,stringToWeekdayCode("tuesday"));
+        assertEquals(TUESDAY,stringToWeekdayCode("TUESDAY"));
+        assertEquals(TUESDAY, stringToWeekdayCode("tue"));
+//        assertEquals(TUESDAY, stringToWeekdayCode("tues"));
 
         assertEquals(WEDNESDAY, stringToWeekdayCode("Wednesday"));
         assertEquals(WEDNESDAY, stringToWeekdayCode("Wed"));
-        // assertEquals(WEDNESDAY,stringToWeekdayCode("wednesday"));
-        // assertEquals(WEDNESDAY,stringToWeekdayCode("WEDNESDAY"));
-        // assertEquals(WEDNESDAY, stringToWeekdayCode("wed"));
+         assertEquals(WEDNESDAY,stringToWeekdayCode("wednesday"));
+         assertEquals(WEDNESDAY,stringToWeekdayCode("WEDNESDAY"));
+         assertEquals(WEDNESDAY, stringToWeekdayCode("wed"));
 
         assertEquals(THURSDAY, stringToWeekdayCode("Thursday"));
         assertEquals(THURSDAY, stringToWeekdayCode("Thu"));
-        // assertEquals(THURSDAY,stringToWeekdayCode("thursday"));
-        // assertEquals(THURSDAY,stringToWeekdayCode("THURSDAY"));
-        // assertEquals(THURSDAY, stringToWeekdayCode("thu"));
-        // assertEquals(THURSDAY, stringToWeekdayCode("thurs"));
+         assertEquals(THURSDAY,stringToWeekdayCode("thursday"));
+         assertEquals(THURSDAY,stringToWeekdayCode("THURSDAY"));
+         assertEquals(THURSDAY, stringToWeekdayCode("thu"));
+//         assertEquals(THURSDAY, stringToWeekdayCode("thurs"));
 
         assertEquals(FRIDAY, stringToWeekdayCode("Friday"));
         assertEquals(FRIDAY, stringToWeekdayCode("Fri"));
-        // assertEquals(FRIDAY,stringToWeekdayCode("friday"));
-        // assertEquals(FRIDAY,stringToWeekdayCode("FRIDAY"));
-        // assertEquals(FRIDAY, stringToWeekdayCode("fri"));
+         assertEquals(FRIDAY,stringToWeekdayCode("friday"));
+         assertEquals(FRIDAY,stringToWeekdayCode("FRIDAY"));
+         assertEquals(FRIDAY, stringToWeekdayCode("fri"));
 
         assertEquals(SATURDAY, stringToWeekdayCode("Saturday"));
         assertEquals(SATURDAY, stringToWeekdayCode("Sat"));
-        // assertEquals(SATURDAY,stringToWeekdayCode("saturday"));
-        // assertEquals(SATURDAY,stringToWeekdayCode("SATURDAY"));
-        // assertEquals(SATURDAY, stringToWeekdayCode("sat"));
+         assertEquals(SATURDAY,stringToWeekdayCode("saturday"));
+         assertEquals(SATURDAY,stringToWeekdayCode("SATURDAY"));
+         assertEquals(SATURDAY, stringToWeekdayCode("sat"));
 
         assertEquals(SUNDAY, stringToWeekdayCode("Sunday"));
         assertEquals(SUNDAY, stringToWeekdayCode("Sun"));
-        // assertEquals(SUNDAY,stringToWeekdayCode("sunday"));
-        // assertEquals(SUNDAY,stringToWeekdayCode("SUNDAY"));
-        // assertEquals(SUNDAY, stringToWeekdayCode("sun"));
+         assertEquals(SUNDAY,stringToWeekdayCode("sunday"));
+         assertEquals(SUNDAY,stringToWeekdayCode("SUNDAY"));
+         assertEquals(SUNDAY, stringToWeekdayCode("sun"));
     }
 
     public void testWeekdayCodeToString() throws Exception {
@@ -165,57 +165,57 @@ public class BobsSerialDateTest extends TestCase {
             assertEquals(m, stringToMonthCode(monthCodeToString(m, true)));
         }
 
-        // assertEquals(1,stringToMonthCode("jan"));
-        // assertEquals(2,stringToMonthCode("feb"));
-        // assertEquals(3,stringToMonthCode("mar"));
-        // assertEquals(4,stringToMonthCode("apr"));
-        // assertEquals(5,stringToMonthCode("may"));
-        // assertEquals(6,stringToMonthCode("jun"));
-        // assertEquals(7,stringToMonthCode("jul"));
-        // assertEquals(8,stringToMonthCode("aug"));
-        // assertEquals(9,stringToMonthCode("sep"));
-        // assertEquals(10,stringToMonthCode("oct"));
-        // assertEquals(11,stringToMonthCode("nov"));
-        // assertEquals(12,stringToMonthCode("dec"));
+         assertEquals(1,stringToMonthCode("jan"));
+         assertEquals(2,stringToMonthCode("feb"));
+         assertEquals(3,stringToMonthCode("mar"));
+         assertEquals(4,stringToMonthCode("apr"));
+         assertEquals(5,stringToMonthCode("may"));
+         assertEquals(6,stringToMonthCode("jun"));
+         assertEquals(7,stringToMonthCode("jul"));
+         assertEquals(8,stringToMonthCode("aug"));
+         assertEquals(9,stringToMonthCode("sep"));
+         assertEquals(10,stringToMonthCode("oct"));
+         assertEquals(11,stringToMonthCode("nov"));
+         assertEquals(12,stringToMonthCode("dec"));
 
-        // assertEquals(1,stringToMonthCode("JAN"));
-        // assertEquals(2,stringToMonthCode("FEB"));
-        // assertEquals(3,stringToMonthCode("MAR"));
-        // assertEquals(4,stringToMonthCode("APR"));
-        // assertEquals(5,stringToMonthCode("MAY"));
-        // assertEquals(6,stringToMonthCode("JUN"));
-        // assertEquals(7,stringToMonthCode("JUL"));
-        // assertEquals(8,stringToMonthCode("AUG"));
-        // assertEquals(9,stringToMonthCode("SEP"));
-        // assertEquals(10,stringToMonthCode("OCT"));
-        // assertEquals(11,stringToMonthCode("NOV"));
-        // assertEquals(12,stringToMonthCode("DEC"));
+         assertEquals(1,stringToMonthCode("JAN"));
+         assertEquals(2,stringToMonthCode("FEB"));
+         assertEquals(3,stringToMonthCode("MAR"));
+         assertEquals(4,stringToMonthCode("APR"));
+         assertEquals(5,stringToMonthCode("MAY"));
+         assertEquals(6,stringToMonthCode("JUN"));
+         assertEquals(7,stringToMonthCode("JUL"));
+         assertEquals(8,stringToMonthCode("AUG"));
+         assertEquals(9,stringToMonthCode("SEP"));
+         assertEquals(10,stringToMonthCode("OCT"));
+         assertEquals(11,stringToMonthCode("NOV"));
+         assertEquals(12,stringToMonthCode("DEC"));
 
-        // assertEquals(1,stringToMonthCode("january"));
-        // assertEquals(2,stringToMonthCode("february"));
-        // assertEquals(3,stringToMonthCode("march"));
-        // assertEquals(4,stringToMonthCode("april"));
-        // assertEquals(5,stringToMonthCode("may"));
-        // assertEquals(6,stringToMonthCode("june"));
-        // assertEquals(7,stringToMonthCode("july"));
-        // assertEquals(8,stringToMonthCode("august"));
-        // assertEquals(9,stringToMonthCode("september"));
-        // assertEquals(10,stringToMonthCode("october"));
-        // assertEquals(11,stringToMonthCode("november"));
-        // assertEquals(12,stringToMonthCode("december"));
+         assertEquals(1,stringToMonthCode("january"));
+         assertEquals(2,stringToMonthCode("february"));
+         assertEquals(3,stringToMonthCode("march"));
+         assertEquals(4,stringToMonthCode("april"));
+         assertEquals(5,stringToMonthCode("may"));
+         assertEquals(6,stringToMonthCode("june"));
+         assertEquals(7,stringToMonthCode("july"));
+         assertEquals(8,stringToMonthCode("august"));
+         assertEquals(9,stringToMonthCode("september"));
+         assertEquals(10,stringToMonthCode("october"));
+         assertEquals(11,stringToMonthCode("november"));
+         assertEquals(12,stringToMonthCode("december"));
 
-        // assertEquals(1,stringToMonthCode("JANUARY"));
-        // assertEquals(2,stringToMonthCode("FEBRUARY"));
-        // assertEquals(3,stringToMonthCode("MAR"));
-        // assertEquals(4,stringToMonthCode("APRIL"));
-        // assertEquals(5,stringToMonthCode("MAY"));
-        // assertEquals(6,stringToMonthCode("JUNE"));
-        // assertEquals(7,stringToMonthCode("JULY"));
-        // assertEquals(8,stringToMonthCode("AUGUST"));
-        // assertEquals(9,stringToMonthCode("SEPTEMBER"));
-        // assertEquals(10,stringToMonthCode("OCTOBER"));
-        // assertEquals(11,stringToMonthCode("NOVEMBER"));
-        // assertEquals(12,stringToMonthCode("DECEMBER"));
+         assertEquals(1,stringToMonthCode("JANUARY"));
+         assertEquals(2,stringToMonthCode("FEBRUARY"));
+         assertEquals(3,stringToMonthCode("MAR"));
+         assertEquals(4,stringToMonthCode("APRIL"));
+         assertEquals(5,stringToMonthCode("MAY"));
+         assertEquals(6,stringToMonthCode("JUNE"));
+         assertEquals(7,stringToMonthCode("JULY"));
+         assertEquals(8,stringToMonthCode("AUGUST"));
+         assertEquals(9,stringToMonthCode("SEPTEMBER"));
+         assertEquals(10,stringToMonthCode("OCTOBER"));
+         assertEquals(11,stringToMonthCode("NOVEMBER"));
+         assertEquals(12,stringToMonthCode("DECEMBER"));
     }
 
     public void testIsValidWeekInMonthCode() throws Exception {
